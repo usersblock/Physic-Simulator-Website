@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="styles.css">
+<title>Physics Simulator LinearV0.1</title>
+</head>
+<body>
+<div class="container">
+	<div class="navbar">
+		<ul>
+			<li><a href="physicsim.html">Home</a></li>
+			<li><a href="linear.html">Linear</a></li>
+			<li><a href="newtonfirstandsecondlaw.html">Net force</a></li>
+			<li><a>Physics 2</a></li>
+		</ul>
+	<div class="simulationexplanation">
+	<div class="education">
+	<p>This is a simulation of the effects of acceleration on an object moving at a certain horizontal and vertical speed.</p>
+	</div>
+	<div class="input">
+		<form onsubmit="container(); return false;">
+		<ul>
+		<li>
+		Vertical Speed:<br>
+  		<input type="text" id="verticalspeed" name="namesy" value="0"><br></li>
+		<li>
+  		Horizontal Speed:<br>
+  		<input type="text" id="horizontalspeed" name="namesx" value="0"><br></li>
+		<li>
+  		Vertical Acceleration:<br>
+  		<input type="text" id="verticalacel" name="namey" value="0"><br></li>
+		<li>
+  		Horizontal Acceleration:<br>
+  		<input type="text" id="horizontalacel" name="namex" value="0"><br><br></li>
+		</ul>
+		<div class="submit">
+  		<button type="submit" value="Submit">Start</button>
+		</div>
+		</form>
+	</div>
+	</div>
+		<canvas class="linear">
+			<p>Your browser doesn't support canvas. Boo hoo!</p>
+		</canvas>
+
+</div>
+<script src="simulation.js"></script>
+</body>
+</html>

@@ -1,0 +1,129 @@
+body{
+height:1000px;
+background-color:#42b6f4;
+}
+
+.container{
+background-color:#1f709b;
+padding:10px;
+height:100%;
+}
+
+.navbar ul{
+list-style-type: none;
+text-align:center;
+    margin:0;
+    padding: 10px;
+    overflow: hidden;
+    background-color: black;
+}
+
+.navbar li{
+display:inline-block;
+
+}
+
+.navbar li a{
+display:block;
+color:white;
+text-align:center;
+padding:14px 16px;
+text-decoration none;
+}
+
+.navbar li a:hover{
+background-color:white;
+color:black;
+}
+
+.intro{
+margin:20px;
+display:block;
+float:left;
+background-color:white;
+height:300px;
+width:850px;
+border-style:solid;
+border-width:10px;
+border-color:black;
+}
+
+
+.update{
+margin:20px;
+display:block;
+float:right;
+background-color:white;
+height:700px;
+width:500px;
+border-style:solid;
+border-width:10px;
+border-color:black;
+}
+
+.linear{
+margin:20px;
+display:block;
+float:right;
+background-color:white;
+height:700px;
+width:1000px;
+border-style:solid;
+border-width:10px;
+border-color:black;
+}
+
+.simulationexplanation{
+margin:20px;
+display:block;
+float:left;
+height:1000px;
+width:350px;
+}
+
+.education{
+margin:20px;
+display:block;
+float:left;
+background-color:#0d3347;
+color:white;
+height:400px;
+width:300px;
+border-style:solid;
+border-width:10px;
+border-color:black;
+}
+
+.education p{
+margin:30px;
+}
+
+.input{
+margin:20px;
+display:block;
+float:left;
+background-color:black;
+color:white;
+height:400px;
+width:300px;
+border-style:solid;
+border-width:10px;
+border-color:black;
+}
+
+.input ul{
+width:280px;
+margin: auto;}
+
+
+.input li{
+margin: auto;
+background-color:#0d3347;
+width:280px;
+height:50px;
+color:white;
+}
+
+.submit{
+text-align:center;
+}

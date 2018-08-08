@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="styles.css">
+<title>Physics Simulator LinearV0.1</title>
+</head>
+<body>
+<div class="container">
+	<div class="navbar">
+		<ul>
+			<li><a href="physicsim.html">Home</a></li>
+			<li><a href="linear.html">Linear</a></li>
+			<li><a href="newtonfirstandsecondlaw.html">Net force</a></li>
+			<li><a>Physics 2</a></li>
+		</ul>
+	<div class="simulationexplanation">
+	<div class="education">
+	<p>This is a simulation of the Netforce on an object of a certain mass. Various color lines indicate the forces acting upon the object with the white line representing the Netforce. The smaller lines on top of the larger ones indicate the acceleration the object would be experiencing in a certain direction.</p>
+	</div>
+	<div class="input">
+		<form onsubmit="containernetforce(); return false;">
+	<ul>
+		<li>Force 1:<br>
+  		<input type="text" id="forceone" name="fo" value="0"><br></li>
+		<li>
+  		Direction 1:<br>
+  		<input type="text" id="directionone" name="do" value="0"><br></li>
+		<li>
+  		Force 2:<br>
+  		<input type="text" id="forcetwo" name="ft" value="0"><br></li>
+		<li>
+  		Direction 2:<br>
+  		<input type="text" id="directiontwo" name="dt" value="0"><br></li>
+		<li>
+		Force 3<br>
+  		<input type="text" id="forcethree" name="fth" value="0"><br></li>
+		<li>
+  		Direction 3:<br>
+  		<input type="text" id="directionthree" name="dth" value="0"><br></li>
+		<li>
+		Mass:<br>
+  		<input type="text" id="mass" name="m" value="1"><br>
+		</li>
+		</ul>
+		<div class="submit">
+  		<button type="submit" value="Submit">Start</button>
+		</div>
+		</form>
+	</div>
+	</div>
+		<canvas class="linear">
+			<p>Your browser doesn't support canvas. Boo hoo!</p>
+		</canvas>
+
+</div>
+<script src="simulation.js"></script>
+</body>
+</html>

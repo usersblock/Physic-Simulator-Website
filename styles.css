@@ -37,10 +37,11 @@ color:black;
 }
 
 .intro{
+color:white;
 margin:20px;
 display:block;
 float:left;
-background-color:white;
+background-color:#0d3347;
 height:300px;
 width:850px;
 border-style:solid;
@@ -48,12 +49,15 @@ border-width:10px;
 border-color:black;
 }
 
+.intro p{
+margin:30px;}
 
 .update{
 margin:20px;
 display:block;
 float:right;
-background-color:white;
+background-color:#0d3347;
+color:white;
 height:700px;
 width:500px;
 border-style:solid;
@@ -61,11 +65,16 @@ border-width:10px;
 border-color:black;
 }
 
+.update p{
+margin:30px;}
+
+
 .linear{
 margin:20px;
 display:block;
 float:right;
 background-color:white;
+color:white;
 height:700px;
 width:1000px;
 border-style:solid;

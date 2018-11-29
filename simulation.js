@@ -165,3 +165,51 @@ function containernetforce(){
 	loopnetforce(directionone,forceone,directiontwo,forcetwo,directionthree,forcethree,totaldegree,magnitude,mass);
 }
 
+function loopramp(direction){
+	clinear.fillStyle = 'rgba(0,0,0,0.25)';
+	clinear.fillRect(0,0,linearwidth,linearheight);
+	ball.draw();
+	ball.update(0,0);
+	let otherend=direction+100;
+	netforceline(500,350,direction,20,100,"#0099ff");
+	netforceline(500,350,direction,20,-100,"#33cc33");
+	requestAnimationFrame(function(){loopramp(direction);});
+}
+
+
+function containerramp(){
+	let angle=document.getElementById("angle").value;
+	let mass=document.getElementById("mass").value;
+	let gravity=document.getElementById("gravity").value;
+	let friction=document.getElementById("friction").value;
+	if(angle>=90&&angle<=270){
+		friction=0;
+	}
+	let weight=mass*gravity;
+	let rad=degToRad(angle);
+	let normalforce=Math.cos(rad)*mass*gravity;
+	let netforce=Math.sin(rad)*mass*gravity;
+	let frictionforce=netforce*friction;
+	let trueforce=netforce-frictionforce;
+	if(trueforce<0){
+		trueforce=0;
+	}
+	let convacelx=calculatexforce(angle,trueforce);
+	let convacely=calculateyforce(angle,trueforce);
+	if(angle>=90&&angle<=270){
+		convacelx=0;
+		convacely=calculateyforce(90,weight);
+	}
+	let resetball=new 	Ball(20,500,350,0,0,convacelx,convacely,'rgb(255,20,20)');
+	let changex=Math.cos(rad+1.57)*-30;
+	let changey=Math.sin(rad+1.57)*-30;
+	resetball.x=resetball.x+changex;
+	resetball.y=resetball.y+changey;
+	ball=resetball;
+	clinear.fillStyle='rgb(255,20,20)';
+	clinear.fill();
+	loopramp(angle);
+
+}
+
+

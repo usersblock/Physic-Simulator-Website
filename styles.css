@@ -3,6 +3,10 @@ height:1000px;
 background-color:#42b6f4;
 }
 
+p {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
 .container{
 background-color:#1f709b;
 padding:10px;
@@ -113,7 +117,7 @@ display:block;
 float:left;
 background-color:black;
 color:white;
-height:400px;
+/*height:400px;*/
 width:300px;
 border-style:solid;
 border-width:10px;

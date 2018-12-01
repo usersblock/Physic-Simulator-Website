@@ -5,6 +5,10 @@ const clinear = linearsimulation.getContext('2d');
 clinear.fillStyle='rgb(255,20,20)';
 clinear.fill();
 
+function RadTodeg(rad) {
+	return rad * 180/ Math.PI;
+};
+
 function degToRad(degrees) {
 	return degrees * Math.PI / 180;
 };
@@ -209,6 +213,54 @@ function containerramp(){
 	clinear.fillStyle='rgb(255,20,20)';
 	clinear.fill();
 	loopramp(angle);
+
+}
+
+function loopcircular(magnitude,anglem){
+	clinear.fillStyle = 'rgba(0,0,0,0.25)';
+	clinear.fillRect(0,0,linearwidth,linearheight);
+	let radiuses=document.getElementById("radius").value;
+	let velocity=document.getElementById("velocity").value;
+	let degreex=Math.cos(anglem);
+	let degreey=Math.sin(anglem);
+	let rads=Math.atan2(degreey,degreex);
+	rads=(rads*180/Math.PI)+180;
+	centerball.draw();
+		let radius=Math.sqrt(Math.pow(Math.abs(ball.x-500),2)+Math.pow(Math.abs(ball.y-350),2));
+	ball.x=500+Math.cos(anglem)*radius;
+	ball.y=350+Math.sin(anglem)*radius;
+	netforceline(ball.x,ball.y,rads,10,Math.pow(velocity,2)/radiuses/10,"#0099ff");
+	netforceline(ball.x,ball.y,rads-90,10,velocity/10,"#00ff99");
+	netforceline(200,600,0,20,5,"#0099ff");
+	netforceline(200,620,0,20,5,"#33cc33");
+	clinear.fillStyle="white";
+	clinear.font = "20px Arial";
+	clinear.fillText("Acceleration: "+(Math.pow(velocity,2)/radiuses),50,610);
+	clinear.fillText("Velocity: "+velocity,50,630);
+
+	ball.draw();
+	ball.update(0,0);
+	let fps=1/1000;
+	let anglechange=fps*magnitude;
+	requestAnimationFrame(function(){loopcircular(magnitude,anglem+anglechange);});
+}
+
+function containercircularmotion(){
+	let radius=document.getElementById("radius").value;
+	let mass=document.getElementById("mass").value;
+	let velocity=document.getElementById("velocity").value;
+	let acceleration=(velocity*velocity)/radius;
+	let angle=90
+	let rad=degToRad(angle+90);
+	let force=(velocity*velocity*mass)/radius;
+	let specialw=velocity/radius;
+	let resetball=new Ball(mass*10,500-(-1*radius),350,0,0,0,0,'rgb(255,20,20)');
+	let center=new Ball(10,500,350,0,0,0,0,'rgb(20,255,20)');
+	centerball=center;
+	ball=resetball;
+	clinear.fillStyle='rgb(255,20,20)';
+	clinear.fill();
+	loopcircular(specialw,0);
 
 }
 

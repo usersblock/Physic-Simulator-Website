@@ -17,23 +17,22 @@
 		</ul>
 	<div class="simulationexplanation">
 	<div class="education">
-	<p>This is a simulation of the effects of friction on an object on an inclined plane.</p>
+	<p>This is a simulation of constant circular motion.</p>
+	<p>The acceleration of  particle traveling at constant circular motion can be calculated with the formula a=(v^2)/r with v standing for velocity and r standing for radius.<p>
+	<p>Angular change can be calculated using the formula w=v/r. w stands for the change in angle in terms of radians/second.
 	</div>
 	<div class="input">
-		<form onsubmit="containerramp(); return false;">
+		<form onsubmit="containercircularmotion(); return false;">
 		<ul>
 		<li>
 		Mass:<br>
   		<input type="text" id="mass" name="namesy" value="1"><br></li>
 		<li>
-  		Gravity:<br>
-  		<input type="text" id="gravity" name="namesx" value="0"><br></li>
+  		Radius:<br>
+  		<input type="text" id="radius" name="namesx" value="1"><br></li>
 		<li>
-  		Ramp Angle:<br>
-  		<input type="text" id="angle" name="namey" value="0"><br></li>
-		<li>
-  		Coefficent of Kinetic friction:<br>
-  		<input type="text" id="friction" name="namey" value="0"><br></li>
+  		Velocity:<br>
+  		<input type="text" id="velocity" name="namey" value="0"><br></li>
 		</ul>
 		<div class="submit">
   		<button type="submit" value="Submit">Start</button>
